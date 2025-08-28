@@ -8,6 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build:web": "expo export -p web",
+    "vercel-build": "expo export -p web",
     "deploy": "npm run build:web && vercel --prod"
   },
   "dependencies": {
