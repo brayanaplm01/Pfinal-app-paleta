@@ -6,7 +6,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { HomeScreen } from '../screens/HomeScreen';
 import { SavedPalettesScreen } from '../screens/SavedPalettesScreen';
 import { FavoritesScreen } from '../screens/FavoritesScreen';
-import { DatabaseManagementScreen } from '../screens/DatabaseManagementScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,8 +23,6 @@ export const AppNavigator: React.FC = () => {
               iconName = focused ? 'folder' : 'folder-outline';
             } else if (route.name === 'Favorites') {
               iconName = focused ? 'heart' : 'heart-outline';
-            } else if (route.name === 'Database') {
-              iconName = focused ? 'server' : 'server-outline';
             } else {
               iconName = 'help-outline';
             }
@@ -77,14 +74,6 @@ export const AppNavigator: React.FC = () => {
           options={{
             title: 'Favoritas',
             headerTitle: 'Paletas Favoritas',
-          }}
-        />
-        <Tab.Screen
-          name="Database"
-          component={DatabaseManagementScreen}
-          options={{
-            title: 'BD',
-            headerTitle: 'Base de Datos',
           }}
         />
       </Tab.Navigator>
